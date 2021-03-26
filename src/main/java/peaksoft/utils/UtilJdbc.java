@@ -1,10 +1,10 @@
-package peaksoft.util;
+package peaksoft.utils;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class Util {
+public class UtilJdbc {
     // реализуйте настройку соеденения с БД
     private final static String url = "jdbc:postgresql://localhost:5432/user";
     private final static String user = "postgres";

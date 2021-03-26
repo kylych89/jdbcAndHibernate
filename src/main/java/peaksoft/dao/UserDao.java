@@ -6,7 +6,9 @@ import java.util.List;
 
 public interface UserDao {
 
-    UserDao INSTANCE = new UserDaoJdbcImpl();
+    UserDao INSTANCE_JDBC = new UserDaoJdbcImpl();
+
+    UserDao INSTANCE_HIBERNATE = new UserDaoHibernateImpl();
 
     void createUsersTable();
 
