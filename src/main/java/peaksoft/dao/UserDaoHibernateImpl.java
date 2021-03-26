@@ -33,7 +33,14 @@ public class UserDaoHibernateImpl implements UserDao {
         session.save(user);
         session.getTransaction().commit();
         session.close();
-        UtilHibernate.shutDown();
+
+        /*
+         * тест кылган учурда
+         * shutDown методу катаа чыгарып жатат
+         * java.lang.IllegalStateException: EntityManagerFactory is closed
+         * ошон учун бул методду чакырган жокмун
+         */
+//        UtilHibernate.shutDown();
         System.out.println("Added successfully!!!\n" + user);
     }
 
@@ -45,7 +52,14 @@ public class UserDaoHibernateImpl implements UserDao {
         session.delete(user);
         session.getTransaction().commit();
         session.close();
-        UtilHibernate.shutDown();
+
+        /*
+         * тест кылган учурда
+         * shutDown методу катаа чыгарып жатат
+         * java.lang.IllegalStateException: EntityManagerFactory is closed
+         * ошон учун бул методду чакырган жокмун
+         */
+//        UtilHibernate.shutDown();
         System.out.println("Successfully deleted!!!\n" + user);
     }
 
@@ -56,7 +70,14 @@ public class UserDaoHibernateImpl implements UserDao {
         List<User> users = session.createQuery("from User ").getResultList();
         session.getTransaction().commit();
         session.close();
-        UtilHibernate.shutDown();
+
+        /*
+         * тест кылган учурда
+         * shutDown методу катаа чыгарып жатат
+         * java.lang.IllegalStateException: EntityManagerFactory is closed
+         * ошон учун бул методду чакырган жокмун
+         */
+//        UtilHibernate.shutDown();
         for (User user : users) {
             System.out.println("Finded " + user + " users");
         }
@@ -71,7 +92,14 @@ public class UserDaoHibernateImpl implements UserDao {
         query.executeUpdate();
         session.getTransaction().commit();
         session.close();
-        UtilHibernate.shutDown();
+
+        /*
+         * тест кылган учурда
+         * shutDown методу катаа чыгарып жатат
+         * java.lang.IllegalStateException: EntityManagerFactory is closed
+         * ошон учун бул методду чакырган жокмун
+         */
+//        UtilHibernate.shutDown();
         System.out.println("Table successfully cleaned!!!");
     }
 }
