@@ -42,5 +42,7 @@ public class Main {
 
 //        UserService.INSTANCE.cleanUsersTable();
 
+//        UserService.INSTANCE.dropUsersTable();
+
     }
 }

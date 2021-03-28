@@ -12,7 +12,9 @@ public class UserServiceImpl implements UserService {
     }
 
     public void dropUsersTable() {
-        UserDao.INSTANCE_JDBC.dropUsersTable();
+//        UserDao.INSTANCE_JDBC.dropUsersTable();
+        UserDao.INSTANCE_HIBERNATE.dropUsersTable();
+
     }
 
     public void saveUser(String name, String lastName, byte age) {

@@ -19,7 +19,13 @@ public class UserDaoHibernateImpl implements UserDao {
 
     @Override
     public void dropUsersTable() {
-
+//        Session session = UtilHibernate.getSessionFactory().openSession();
+//        session.beginTransaction();
+//        Query query = session.createQuery("drop from User");
+//        query.executeUpdate();
+//        session.getTransaction().commit();
+//        session.close();
+//        System.out.println("Table successfully deleted!!!");
     }
 
     @Override
