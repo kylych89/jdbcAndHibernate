@@ -58,4 +58,8 @@ public class Util {
     public static Session getSession() throws HibernateException {
         return sessionFactory.openSession();
     }
+
+    public static void shutDown() {
+        getSession().close();
+    }
 }

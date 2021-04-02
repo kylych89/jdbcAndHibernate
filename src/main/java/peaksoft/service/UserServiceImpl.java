@@ -1,6 +1,7 @@
 package peaksoft.service;
 
 import peaksoft.dao.UserDao;
+import peaksoft.dao.UserDaoHibernateImpl;
 import peaksoft.dao.UserDaoJdbcImpl;
 import peaksoft.model.User;
 
@@ -8,31 +9,38 @@ import java.util.List;
 
 public class UserServiceImpl implements UserService {
 
-    private UserDao userDao = new UserDaoJdbcImpl();
+    private UserDao userDaoJdbc = new UserDaoJdbcImpl();
+    private UserDao userDaoHibernate = new UserDaoHibernateImpl();
 
     public void createUsersTable() {
-        userDao.createUsersTable();
+//        userDaoJdbc.createUsersTable();
+        userDaoHibernate.createUsersTable();
     }
 
     public void dropUsersTable() {
-        userDao.dropUsersTable();
+//        userDaoJdbc.dropUsersTable();
+        userDaoHibernate.dropUsersTable();
     }
 
     public void saveUser(String name, String lastName, byte age) {
-        userDao.saveUser(name, lastName, age);
+//        userDaoJdbc.saveUser(name, lastName, age);
+        userDaoHibernate.saveUser(name, lastName, age);
     }
 
     public void removeUserById(long id) {
-        userDao.removeUserById(id);
+//        userDaoJdbc.removeUserById(id);
+        userDaoHibernate.removeUserById(id);
     }
 
     public List<User> getAllUsers() {
         List<User> list;
-        list = userDao.getAllUsers();
+//        list = userDaoJdbc.getAllUsers();
+        list = userDaoHibernate.getAllUsers();
         return list;
     }
 
     public void cleanUsersTable() {
-        userDao.cleanUsersTable();
+//        userDaoJdbc.cleanUsersTable();
+        userDaoHibernate.cleanUsersTable();
     }
 }

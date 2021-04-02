@@ -2,6 +2,7 @@ package peaksoft;
 
 import peaksoft.service.UserService;
 import peaksoft.service.UserServiceImpl;
+import peaksoft.util.Util;
 
 public class Main {
 
@@ -30,8 +31,7 @@ public class Main {
 //        userService.cleanUsersTable();
 
 
-
-
+        // **********************************************************
 
         // Hibernate
 
@@ -51,6 +51,8 @@ public class Main {
 //        userService.cleanUsersTable();
 
 //        userService.dropUsersTable();
+
+//        Util.shutDown();
 
     }
 }
