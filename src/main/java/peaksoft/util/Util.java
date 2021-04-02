@@ -3,12 +3,15 @@ package peaksoft.util;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
 import peaksoft.model.User;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.Properties;
+
+import static org.hibernate.cfg.AvailableSettings.URL;
 
 public class Util {
     // реализуйте настройку соеденения с БД
@@ -41,7 +44,7 @@ public class Util {
             prop.setProperty("hibernate.connection.password", "010689");
             prop.setProperty("dialect", "org.hibernate.dialect.PostgreSQL9Dialect");
 
-            prop.setProperty("hibernate.hbm2ddl.auto", "create");
+//            prop.setProperty("hibernate.hbm2ddl.auto", "create");
 
             sessionFactory = new org.hibernate.cfg.Configuration()
                     .addProperties(prop)

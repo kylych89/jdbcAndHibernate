@@ -34,20 +34,23 @@ public class Main {
 
 
         // Hibernate
-//        UserService.INSTANCE.saveUser("Kanat", "Subanov", (byte) 23);
-//        UserService.INSTANCE.saveUser("Kylych", "Sydykov", (byte) 32);
-//        UserService.INSTANCE.saveUser("Chyngyz", "Sharshekeev", (byte) 34);
-//        UserService.INSTANCE.saveUser("Aktan", "Chakiev", (byte) 17);
-//        UserService.INSTANCE.saveUser("Kairat", "Mambetakunov", (byte) 33);
-//        UserService.INSTANCE.saveUser("Esen", "Ryspekov", (byte) 29);
 
-//        UserService.INSTANCE.getAllUsers();
+//        userService.createUsersTable();
+//
+//        userService.saveUser("Kanat", "Subanov", (byte) 23);
+//        userService.saveUser("Kylych", "Sydykov", (byte) 32);
+//        userService.saveUser("Chyngyz", "Sharshekeev", (byte) 34);
+//        userService.saveUser("Aktan", "Chakiev", (byte) 17);
+//        userService.saveUser("Kairat", "Mambetakunov", (byte) 33);
+//        userService.saveUser("Esen", "Ryspekov", (byte) 29);
 
-//        UserService.INSTANCE.removeUserById(1);
+//        userService.getAllUsers();
 
-//        UserService.INSTANCE.cleanUsersTable();
+//        userService.removeUserById(1);
 
-//        UserService.INSTANCE.dropUsersTable();
+//        userService.cleanUsersTable();
+
+//        userService.dropUsersTable();
 
     }
 }

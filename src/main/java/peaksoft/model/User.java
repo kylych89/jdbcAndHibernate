@@ -1,6 +1,7 @@
 package peaksoft.model;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 
 import javax.persistence.*;
@@ -8,7 +9,8 @@ import javax.persistence.*;
 @Entity
 @Table(name = "users")
 @Data
-@RequiredArgsConstructor
+//@RequiredArgsConstructor
+//@NoArgsConstructor
 public class User {
 
     @Id
@@ -23,6 +25,15 @@ public class User {
 
     @Column
     private Byte age;
+
+    public User(String name, String lastName, Byte age) {
+        this.name = name;
+        this.lastName = lastName;
+        this.age = age;
+    }
+
+    public User() {
+    }
 
     @Override
     public String toString() {
