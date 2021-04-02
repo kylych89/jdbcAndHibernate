@@ -6,7 +6,6 @@ import java.util.List;
 
 public interface UserService {
 
-    UserService INSTANCE = new UserServiceImpl();
 
     void createUsersTable();
 
